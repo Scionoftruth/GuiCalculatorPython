@@ -1,12 +1,13 @@
-import sys
+# import sys
 
-from PyQt5.QtWidgets import QMainWindow, QWidget, QApplication
+from PyQt5.QtWidgets import QMainWindow, QWidget
 from PyQt5.QtWidgets import QGridLayout, QLineEdit, QPushButton, QVBoxLayout
 from PyQt5.QtCore import Qt
 
-from functools import partial
+# from functools import partial
 
 ERROR_MSG = 'ERROR'
+
 
 class PyCalcUi(QMainWindow):
     def __init__(self):
@@ -68,6 +69,7 @@ class PyCalcUi(QMainWindow):
     def clearDisplay(self):
         self.setDisplayText("")
 
+
 def evaluateExpression(expression):
     try:
         result = str(eval(expression, {}, {}))
@@ -77,6 +79,7 @@ def evaluateExpression(expression):
     return result
 
 
+"""
 class PyCalcCtrl:
     def __init__(self, model, view):
         self._evaluate = model
@@ -102,9 +105,9 @@ class PyCalcCtrl:
         self._view.buttons['='].clicked.connect(self._calculateResult)
         self._view.display.returnPressed.connect(self._calculateResult)
         self._view.buttons['C'].clicked.connect(self._view.clearDisplay)
+"""
 
-
-
+'''
 def main():
     pycalc = QApplication(sys.argv)
     view = PyCalcUi()
@@ -116,3 +119,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
